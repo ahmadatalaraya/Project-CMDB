@@ -5,4 +5,11 @@ spring:
     password: ${SPRING_DATASOURCE_PASSWORD}
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+    show-sql: false
+    open-in-view: false
     database-platform: org.hibernate.dialect.MySQLDialect
